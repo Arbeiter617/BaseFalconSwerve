@@ -10,10 +10,14 @@ import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+// import edu.wpi.first.hal.FRCNetComm.tResourceType;
+// import edu.wpi.first.hal.HAL;
 
 import frc.robot.autos.*;
 import frc.robot.commands.*;
 import frc.robot.subsystems.*;
+
+
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -22,8 +26,12 @@ import frc.robot.subsystems.*;
  * subsystems, commands, and button mappings) should be declared here.
  */
 public class RobotContainer {
+  
   /* Controllers */
   private final Joystick driver = new Joystick(0);
+
+  /*Buttons*/
+ 
 
   /* Drive Controls */
   private final int translationAxis = XboxController.Axis.kLeftY.value;
@@ -43,6 +51,12 @@ public class RobotContainer {
     boolean openLoop = true;
     s_Swerve.setDefaultCommand(new TeleopSwerve(s_Swerve, driver, translationAxis, strafeAxis, rotationAxis, fieldRelative, openLoop));
 
+    
+      
+  
+    
+    
+
     // Configure the button bindings
     configureButtonBindings();
   }
@@ -56,6 +70,16 @@ public class RobotContainer {
   private void configureButtonBindings() {
     /* Driver Buttons */
     zeroGyro.whenPressed(new InstantCommand(() -> s_Swerve.zeroGyro()));
+
+   //var dtgfvhygfvjhchgchchgchgcf;
+   //function fgytrftydhtfdytfdytdtl(L) {
+  //    function Dont() {
+ // get good
+   //   }
+   //} If(robot gonna crash){
+   //  Dont();
+   //}
+
   }
 
   /**
